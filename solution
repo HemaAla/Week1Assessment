@@ -1,0 +1,19 @@
+Observations:
+The TradeProcessor is a god class hence need to apply SRP.
+...> need to distribute the work. such that every class has only oner respobility like writing to xml can be a xml writer
+Then the distributed class and it's methods should be re usable. For thet I have created a seperate class for Validation where every condition named as a method so that it can be called anywhere using that class.
+
+created a testing.cs to test the program
+
+Total Classes:
+
+TradeRecod
+TradeProcessor.cs ---> reads the csv then transforms it into tradrecord using ValidateCsvData.cs class
+ValidateCsvData.cs ----> by using the methods mentioned, it will check the validity of the fields
+XmlWriter---> after successful validation this calss will take those fields then converts it into XML format
+ConsoleLogger.cs ----> The fields which are failed with validation will be stored here.
+Testing.cs ---> for testing purpose
+
+
+
+
